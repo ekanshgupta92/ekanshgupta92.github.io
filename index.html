@@ -7,12 +7,13 @@
     <meta name="description"
         content="Personal Portfolio for Ekansh Gupta showcasing the projects he did and ways to connect to him" />
     <meta name="author" content="Ekansh Gupta" />
-    <meta name="keywords" content="Ekansh Gupta, Columbia University, Bits Pilani, Robotics, SAP Labs" />
+    <meta name="keywords"
+        content="Ekansh Gupta, Columbia University, Bits Pilani, Robotics, SAP Labs, New York, Machine learning, Artificial Learning" />
 
     <meta name="google-site-verification" content="KAOf0UkCfrooQiwLTRMti5tb7OPxlRmFix_3_x_97mU" />
 
-    <title>Portfolio - Ekansh Gupta</title>
-    <link rel="icon" type="image/png" href="./dist/assets/img/logo.png" />
+    <title>Ekansh Gupta</title>
+    <link rel="icon" type="image/png" href="./dist/assets/img/logo2.png" />
     <link rel="canonical" href="http://www.ekanshgupta.co.in" />
     <!-- <link rel="icon" type="image/x-icon" href="dist/assets/img/favicon.ico" /> -->
     <!-- Font Awesome icons (free version)-->
@@ -52,11 +53,11 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li> -->
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#competitions">Competitions</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#competitions">Competitions</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li> -->
                 <li class="nav-item"><a class="nav-link js-scroll-trigger"
                         href="https://drive.google.com/file/d/1-h3nOCF0hSf67zt-ADs5Nvnzz78efNnM/view?usp=sharing"
-                        target="_blank">CV</a></li>
+                        target="_blank">Resume</a></li>
             </ul>
         </div>
     </nav>
@@ -70,16 +71,23 @@
                     <span class="text-primary">Gupta</span>
                 </h1>
                 <div class="subheading mb-5">
-                    Ballupur Road · Dehradun, IN 248001 · (+91) 8077331257 ·
-                    <a href="mailto:ekanshgupta92@email.com">ekanshgupta92@gmail.com</a>
+                    New York, NY · <a href="mailto:ekanshgupta92@email.com">ekanshgupta92@gmail.com</a> · (+1)
+                    646-260-6775
                 </div>
+
+                <h5 class="mb-0">
+                    "Building Intelligent Robotics Systems Through AI/ML Innovation"
+                </h5>
+                <p></p>
                 <p class="lead mb-5">
-                    Hello! I'm an MS Robotics and Control student at <a href="https://www.columbia.edu/">Columbia
-                        University</a>, NYC. I completed my undergraduate in Mechanical Engineering from <a
-                        href="https://www.bits-pilani.ac.in/">BITS Pilani, Pilani Campus</a>. My passion
-                    lies in robotics, and combining it with the exciting realms of Computer Vision and Reinforcement
-                    Learning. I had the privilege of working on my undergraduate thesis at IIIT Hyderabad, under <a
-                        href="https://www.iiit.ac.in/people/faculty/mkrishna/">Professor Madhava Krishna</a>.
+                    As a Robotics and AI Engineer, I specialize in developing intelligent systems that
+                    seamlessly integrate <strong>artificial learning, perception, and robotics</strong>. Currently
+                    pursuing my MS in Robotics at <a href="https://www.columbia.edu/">Columbia University</a>, I'm
+                    passionate about creating autonomous solutions that can perceive, learn, and interact with their
+                    environment in real-time. My expertise spans from advanced perception algorithms for industrial
+                    automation to reinforcement learning for adaptive robot control. I'm committed to pushing the
+                    boundaries of AI and robotics, bridging cutting-edge research with practical applications to solve
+                    complex challenges in automation and decision-making across industries.
                 </p>
                 <div class="social-icons">
                     <a class="social-icon" href="https://www.linkedin.com/in/ekanshgupta92/"><i
@@ -102,20 +110,37 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Differentiable LOAM </h3>
-                        <p> <!-- along with Dr Krishna Murthy Jatavallabhula, Dr Sandeep Chinchali, and Dr Arun
-                            Singh as advisers.  -->
-                            During my undergraduate thesis project under Prof. Madhava Krishna at IIIT Hyderabad, I
-                            focused on enhancing LOAM's differentiability and robustness by introducing per-point
-                            weights within the point cloud. The primary objectives were to refine differentiable point
-                            cloud sampling algorithms, integrate the differentiable ICP algorithm into the existing
-                            pipeline, and generate datasets in CARLA. I also implemented neural network algorithms for
-                            per-point weight prediction, utilizing the deep point cloud compression network by Cyrill
-                            Stachniss. The differentiation of LOAM is pivotal for achieving end-to-end learning,
-                            enabling backpropagation from 3D maps to 2D pixels and facilitating accurate pose
-                            estimation for the camera or ego vehicle.
-                            We later implemented this on the electric car provided my Mathworks to test autonomous
-                            capabalities in real time.
+                        <p> <strong>Problem:</strong> Developing a differentiable variant of LOAM (Lidar Odometry and
+                            Mapping) for end-to-end learning in autonomous vehicles.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Developed a differentiable version of LOAM, enabling sensitivity analysis of point cloud
+                                perturbations on map generation and path planning.</li>
+                            <li>Refined differentiable point cloud sampling algorithms.</li>
+                            <li>Implemented soft selection for scan registration and point selection from LiDAR data.
+                            </li>
+                            <li>Designed and trained an attention-based neural network to assign weights to each point
+                                based on their relevance for ICP.</li>
+                            <li>Attention-based weighting helped mitigate the impact of dynamic obstacles, significantly
+                                improving mapping efficiency.</li>
+                        </ul>
                         </p>
+
+                        <p> <strong>Impact:</strong>
+                        <ul>
+                            <li>Enhanced autonomous navigation capabilities in environments with controlled dynamic
+                                obstacles.</li>
+                            <li>Improved overall mapping efficiency and robustness of LOAM in real-world scenarios.</li>
+                            <li>Successfully validated the algorithm using CARLA simulator.</li>
+                            <li>Integrated and tested the system on MathWorks' autonomous vehicle platform,
+                                demonstrating real-world self-driving capabilities.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> Python, PyTorch, ROS, CARLA Simulator, Deep Learning, point
+                            cloud processing.</p>
+
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/xObXoC_6-X4?si=5IAF3MjfTCqX4PRK"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -139,15 +164,33 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Unmanned Aerial Vehicle</h3>
-                        <p>I was part of a <strong>MeitY-funded</strong> project focused on the "Design and Fabrication
-                            of a Passenger Drone," a collaboration between IIIT Hyderabad and IIT Hyderabad. This
-                            extensive project, funded by the Government of India with a grant of 8 crores, aimed to
-                            develop and enhance passenger drone technology. My role encompassed hardware and software
-                            prototyping, integration, testing, and algorithm development for motion planning (both
-                            global and local) as well as dynamic obstacle avoidance for Pixhawk-based quadcopters. The
-                            path planning was achieved through the utilization of B-spline curves, enhancing the drone's
-                            navigation capabilities.
+
+                        <p> <strong>Problem:</strong> Design an autonomous system for a passenger drone capable of safe,
+                            efficient navigation in complex urban environments with dynamic obstacles.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Developed and implemented B-spline based path planning algorithms for smooth and
+                                efficient drone navigation.</li>
+                            <li>Integrated various sensors for enhanced environmental awareness and obstacle detection.
+                            </li>
+                            <li>Utilized the local support property of B-splines to enable real-time path modification
+                                in response to dynamic obstacles.</li>
+                        </ul>
                         </p>
+
+                        <p> <strong>Impact:</strong>
+                        <ul>
+                            <li>Achieved collision-free navigation in simulated urban environments with dynamic
+                                obstacles.</li>
+                            <li>Enhanced the overall safety and efficiency of passenger drone operations.</li>
+                            <li>Successfully contributed to a $1 Mn, government-funded project with significant
+                                implications for urban air mobility.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> ROS, Gazebo, Python, Sensor fusion, Pixhawk flight
+                            controller, Bsplines.</p>
 
                         <div class="slideshow-container">
 
@@ -192,15 +235,35 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Autonomous Wheelchair</h3>
-                        <p> I was involved in a product-based project funded by IHub-Data, focused on prototyping an
-                            autonomous wheelchair based on VLN (Vision-and-Language Navigation) technology. The goal was
-                            to develop an autonomous wheelchair suitable for deployment in environments like hospitals
-                            or airports. My primary responsibilities included spearheading the hardware implementation
-                            and taking charge of the mapping and localization aspects of the project. To achieve precise
-                            mapping and localization, I applied AMCL (Adaptive Monte Carlo Localization) and RTABmap
-                            (Real-Time Appearance-Based Mapping) methodologies. These efforts were aimed at advancing
-                            mapping and localization accuracy for the autonomous wheelchair.
+
+                        <p> <strong>Problem:</strong> Develop an autonomous wheelchair system capable of navigating
+                            complex indoor environments like hospitals and airports using visual-language commands.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Spearheaded the hardware implementation of an autonomous wheelchair prototype.</li>
+                            <li>Implemented AMCL (Adaptive Monte Carlo Localization) for precise position estimation and
+                                RTABmap (Real-Time Appearance-Based Mapping) for robust 3D mapping of indoor
+                                environments</li>
+                            <li>Helped in training a Vision-and-Language Navigation (VLN) model, enabling natural
+                                language inputs for intuitive control.</li>
+                            <li>Optimized the system for accurate navigation in challenging indoor settings with dynamic
+                                obstacles and varying layouts.</li>
+                        </ul>
                         </p>
+
+                        <p> <strong>Impact:</strong>
+                        <ul>
+                            <li>Achieved high-precision indoor navigation, enhancing safety and reliability in complex
+                                environments.</li>
+                            <li>Enabled intuitive control through natural language commands, improving accessibility for
+                                users.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> Python, ROS, VLM based Deep Learning, AMCL, RTABMaps,
+                            sensors, actuators, and control systems</p>
+
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/-fh-_bw6jk4"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -217,17 +280,36 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Autonomous Quadruped</h3>
-                        <p> I led a group project under Team Robocon, aiming to create an indigenous quadruped. The
-                            project received a substantial funding grant of rupees 12 lakhs from BITSAA, enabling us to
-                            embark on this ambitious venture. Our goal is to provide a long-term learning platform for
-                            students, allowing them to apply theoretical concepts in a practical setting while working
-                            towards the development of a Level 4 autonomy quadruped. In contrast to quadrupeds like
-                            Boston Dynamics' Spot, which heavily rely on kinematics and mechanics, our approach
-                            focuses on Reinforcement Learning (RL). We emphasize the use of RL to enable the bot to
-                            autonomously learn complex physics and master various gait patterns. In my capacity as the
-                            project head, I have been actively involved in the programming of gait patterns and the
-                            development of the RL environment for training the quadruped.
+
+                        <p> <strong>Problem:</strong> Develop an advanced quadruped robot with Level 4 autonomy,
+                            focusing on Reinforcement Learning for gait pattern mastery and complex physics
+                            understanding.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Led the design and implementation of an indigenous quadruped robot funded by BITSAA with
+                                a grant of $30,000.</li>
+                            <li>Developed a Reinforcement Learning (RL) environment for training the quadruped.
+                                Simulated and trained the RL model to autonomously learn complex physics and master
+                                diverse gait patterns.</li>
+                            <li>Programmed and optimized various gait patterns using DDPG.</li>
+                            <li>Integrated deep RL agent with ROS architecture to improve stability and adaptability.
+                            </li>
+                        </ul>
                         </p>
+
+                        <p> <strong>Impact:</strong>
+                        <ul>
+                            <li>Created a long-term learning platform for students to apply theoretical concepts in
+                                robotics.</li>
+                            <li>Pioneered an RL-focused approach, differentiating from kinematics-heavy designs like
+                                Boston Dynamics' Spot.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> Python, OpenAI gym, PyTorch, ROS, Reinforcement Learning,
+                            point, Pybullet</p>
+
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/_4770cm8G_0"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -243,25 +325,31 @@
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Solar panel cleaning bot</h3>
-                        <p>Working under Dr Manoj Soni, to create an adaptive solar panel cleaning bot. Recently
-                            received a funding of <strong>Rs 40,500</strong> to create
-                            the prototype. We initially proposed an X-Y core mechanism in MATLAB using simulink but
-                            later changed it in the course of time.</p>
-                    </div>
-                    <img class="img-projects" src="dist/assets/img/solarpanel.png" alt="">
-                    <!-- <div class="flex-shrink-0"><span class="text-primary">Aug 2021 - Present</span></div> -->
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
                         <h3 class="mb-0">Flipkart Grid 2.0</h3>
-                        <p> Contributed to an Autonomous Hexacopter project for the Flipkart Grid challenge, showcasing
-                            expertise in computer vision and control systems. Leveraging the Realsense camera and
-                            OpenCV, I implemented a robust solution that calculated the position of the center
-                            coordinate within the frame. Applying PID control, I ensured precise movement towards the
-                            specified goal, strategically placing frames at regular intervals as per the challenge
-                            requirements. This solution stood out, ranking among the top 5 solutions in the country </p>
+
+                        <p> <strong>Problem:</strong> Develop an autonomous hexacopter capable of precise indoor
+                            navigation for the Flipkart Grid challenge.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Implemented a computer vision system using Realsense camera and OpenCV to accurately
+                                calculate the center coordinate position within the camera frame.</li>
+                            <li>Designed and implemented a PID control system for precise movement towards specified
+                                goals.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Impact:</strong>
+                        <ul>
+                            <li>Achieved top 5 ranking nationwide among 120+ registered teams in the Flipkart Grid
+                                challenge.</li>
+                            <li>Demonstrated advanced capabilities in autonomous drone navigation and precision control.
+                            </li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> Python, ROS, Gazebo, OpenC, control systems.</p>
+
                     </div>
                     <iframe class="vid-projects" src="https://www.youtube.com/embed/WWy6ZgH7QA4"
                         title="YouTube video player" frameborder="0"
@@ -272,6 +360,18 @@
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
+                        <h3 class="mb-0">Solar panel cleaning bot</h3>
+                        <p> Under Dr. Manoj Soni's guidance, I'm led the development of an adaptive solar panel
+                            cleaning robot, securing Rs 40,500 in funding for prototyping. Our approach evolved from an
+                            initial X-Y core mechanism designed in MATLAB Simulink to a more advanced, efficient design.
+                        </p>
+                    </div>
+                    <img class="img-projects" src="dist/assets/img/solarpanel.png" alt="">
+                    <!-- <div class="flex-shrink-0"><span class="text-primary">Aug 2021 - Present</span></div> -->
+                </div>
+
+                <!-- <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
                         <h3 class="mb-0">Omnibase maze solver</h3>
                         <p> Worked on an omniwheeled robot, enabling movement in any direction within the X-Y plane and
                             seamless rotation about its axis. Implemented the RRT algorithm to efficiently navigate the
@@ -280,10 +380,9 @@
                         </p>
                         <img class="img-projects" src="dist/assets/img/omnibase.png" alt="">
                     </div>
-                    <!-- <div class="flex-shrink-0"><span class="text-primary">Jun 2021 - Jul 2021</span></div> -->
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <!-- <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Path planning algorithms</h3>
                         <p>Implemented basic path planning algorithms in python such as A*, Dijkstra and more along with
@@ -293,10 +392,9 @@
                         <img class="img-projects" src="dist/assets/img/rrt.png" alt="">
 
                     </div>
-                    <!-- <div class="flex-shrink-0"><span class="text-primary">Jun 2021 - Jul 2021</span></div> -->
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <!-- <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Study Oriented Project</h3>
                         <p>Worked under Dr Jitendra Singh Rathore on the development of artificial skin. We had to test
@@ -305,8 +403,7 @@
                         <a href="https://drive.google.com/drive/folders/1hYFv3UTkZsBGetgm7bQXaMCD2aDJn0iY?usp=sharing"
                             target="_blank">Project Link</a>
                     </div>
-                    <!-- <div class="flex-shrink-0"><span class="text-primary">Jan 2021 - May 2021</span></div> -->
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -375,20 +472,28 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Columbia University, New York</h3>
                         <div class="subheading mb-3">Master of Science</div>
-                        <div>Mechanical Engineering - Robotics and Control Concentration</div>
-                        <p></p>
+                        <div>Mechanical Engineering - Robotics and Control Concentration - GPA: 3.6/4</div>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">August 2024 - Dec 2025(Exp)</span></div>
+
+                    <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong> Intro to Robotics, Applied
+                        Robotics, Robotics Studio, Robot Learning, Advanced Machine Learning, Neural Networks and Deep
+                        learning, Reinforcement Leaning.</p>
+
+                    <p><strong>Teaching Assistantship:</strong> TA for Lab on a Chip (Micro robotics Spring 2025), IT
+                        Server Management for SURF, Biology Department</p>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Bits Pilani Pilani Campus</h3>
                         <div class="subheading mb-3">Bachelor of Engineering</div>
-                        <div>Mechanical Engineering</div>
-                        <p>CGPA: 8.15/10</p>
+                        <div>Mechanical Engineering - CGPA: 8.2/10</div>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">August 2019 - June 2023</span></div>
+
+                    <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong> Mechatronics, Deep Learning,
+                        Mechanisms and machines, Digital Image Processing.</p>
                 </div>
 
                 <!-- <div class="d-flex flex-column flex-md-row justify-content-between">
@@ -438,7 +543,7 @@
             </section> -->
         <hr class="m-0" />
         <!-- Competitions-->
-        <section class="resume-section" id="competitions">
+        <!-- <section class="resume-section" id="competitions">
             <div class="resume-section-content">
                 <h2 class="mb-5">Competitions</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -475,11 +580,11 @@
                     <div class="flex-shrink-0"><span class="text-primary">Sept 2020</span></div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <hr class="m-0" />
         <!-- Interests-->
-        <section class="resume-section" id="interests">
+        <!-- <section class="resume-section" id="interests">
             <div class="resume-section-content">
                 <h2 class="mb-5">Interests</h2>
                 <ul>
@@ -488,10 +593,9 @@
                     <li>Badminton</li>
                     <li>StockTrading</li>
                 </ul>
-                <!-- <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                                <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p> -->
+                
             </div>
-        </section>
+        </section> -->
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
