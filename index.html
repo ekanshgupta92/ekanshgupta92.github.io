@@ -119,11 +119,9 @@
                                 perturbations on map generation and path planning.</li>
                             <li>Refined differentiable point cloud sampling algorithms.</li>
                             <li>Implemented soft selection for scan registration and point selection from LiDAR data.
-                            </li>
                             <li>Designed and trained an attention-based neural network to assign weights to each point
                                 based on their relevance for ICP.</li>
-                            <li>Attention-based weighting helped mitigate the impact of dynamic obstacles, significantly
-                                improving mapping efficiency.</li>
+                            <li>Collected pointcloud data using the CARLA simulator for training the network.</li>
                         </ul>
                         </p>
 
@@ -132,9 +130,10 @@
                             <li>Enhanced autonomous navigation capabilities in environments with controlled dynamic
                                 obstacles.</li>
                             <li>Improved overall mapping efficiency and robustness of LOAM in real-world scenarios.</li>
-                            <li>Successfully validated the algorithm using CARLA simulator.</li>
                             <li>Integrated and tested the system on MathWorks' autonomous vehicle platform,
                                 demonstrating real-world self-driving capabilities.</li>
+                            <li>Attention-based weighting helped mitigate the impact of dynamic obstacles, significantly
+                                improving mapping efficiency.</li>
                         </ul>
                         </p>
 
@@ -256,7 +255,7 @@
                         <ul>
                             <li>Achieved high-precision indoor navigation, enhancing safety and reliability in complex
                                 environments.</li>
-                            <li>Enabled intuitive control through natural language commands, improving accessibility for
+                            <li>Enabled intuitive control through vision language commands, improving accessibility for
                                 users.</li>
                         </ul>
                         </p>
@@ -269,8 +268,7 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                         <p style="text-align:center"> <em>Video demonstration of the project and its tracking on rviz.
-                                In this, we tested the
-                                bot's motion through congested door so had to give each
+                                In this, we tested the bot's motion through congested door so had to give each
                                 waypoint separately.</em>
                         </p>
                     </div>
@@ -293,7 +291,8 @@
                                 Simulated and trained the RL model to autonomously learn complex physics and master
                                 diverse gait patterns.</li>
                             <li>Programmed and optimized various gait patterns using DDPG.</li>
-                            <li>Integrated deep RL agent with ROS architecture to improve stability and adaptability.
+                            <li>Integrated deep RL agent (DDPG) with ROS architecture to improve stability and
+                                adaptability.
                             </li>
                         </ul>
                         </p>
@@ -359,7 +358,8 @@
 
                         <p> <strong>Solution:</strong>
                         <ul>
-                            <li>3D printed, assembled, and wired up a serial linked quadruped for real-world validation.
+                            <li>Modeled, 3D printed, assembled, and wired up a parallel linkage quadruped for real-world
+                                validation.
                             </li>
                             <li>Deployed a Reinforcement Learning (RL) model for adaptive gait generation using Isaac
                                 Sim and ROS2 architecture for teleop control.</li>
@@ -368,7 +368,13 @@
                             </li>
                         </ul>
                         </p>
-
+                        <p> <strong>Impact:</strong>
+                        <ul>
+                            <li>Due to the modern design, the bot achieved a walking speed of over 18 m/s.</li>
+                            <li>The parallel leg linkage helped in faster joint movements and increased the robustness
+                                of the bot due to stable COM.</li>
+                        </ul>
+                        </p>
                         <p> <strong>Technologies:</strong> ROS2, Pybullet, Sim2Real, Reinforcement Learning, Isaac Sim,
                             3D printing and CAD.</p>
 
@@ -378,6 +384,31 @@
                             allowfullscreen></iframe>
                     </div>
                     <!-- <div class="flex-shrink-0"><span class="text-primary">Mar 2021 - Present</span></div> -->
+                </div>
+
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Chatbot for Crustdata API</h3>
+                        <p> <strong>Problem:</strong> Develop an intelligent chatbot capable of providing accurate
+                            responses based on Notion documentation and Slack channel history.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Implemented a specialized web chatbot using Langchain with RAG, integrating Notion
+                                documention and examples along with additional knowledge from Slack.
+                            </li>
+                            <li>Deployed the chatbot on Slack for instant query resolution.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> Langchain, RAG, NLP, APIs, LLM.</p>
+
+                        <iframe class="vid-projects" src="https://www.youtube.com/embed/FCQvOEZFG3E?si=xP_ybVD_Zi-f1paF"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
