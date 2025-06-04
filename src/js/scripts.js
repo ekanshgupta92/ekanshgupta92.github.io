@@ -2,8 +2,7 @@
 // Scripts
 // 
 
-window.addEventListener('DOMContentLoaded', event => {
-
+window.addEventListener('DOMContentLoaded', () => {
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
@@ -11,14 +10,14 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#sideNav',
             offset: 74,
         });
-    };
+    }
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
     );
-    responsiveNavItems.map(function (responsiveNavItem) {
+    responsiveNavItems.forEach((responsiveNavItem) => {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
@@ -26,52 +25,47 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-});
+    // Slideshow logic
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.mySlides');
+    const dots = document.querySelectorAll('.dot');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
 
-// Project Slideshow
-const Slideshow = {
-    index: 1,
+    function showSlide(index) {
+        // Ensure index stays within bounds
+        slideIndex = (index + slides.length) % slides.length;
 
-    init() {
-        this.showSlides(this.index);
-        this.startAutoAdvance();
-    },
-
-    showSlides(n) {
-        const slideshows = document.querySelectorAll('.slideshow-container');
-
-        slideshows.forEach(slideshow => {
-            const slides = slideshow.querySelectorAll('.mySlides');
-            const dots = slideshow.parentElement.querySelectorAll('.dot');
-
-            // Reset index if out of bounds
-            if (n > slides.length) this.index = 1;
-            if (n < 1) this.index = slides.length;
-
-            // Update slides and dots
-            slides.forEach(slide => slide.style.display = "none");
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            slides[this.index - 1].style.display = "block";
-            dots[this.index - 1].classList.add('active');
-        });
-    },
-
-    currentSlide(n) {
-        this.showSlides(this.index = n);
-    },
-
-    startAutoAdvance() {
-        setInterval(() => {
-            const hasMultipleSlides = document.querySelector('.slideshow-container .mySlides:nth-child(2)');
-            if (hasMultipleSlides) {
-                this.currentSlide(this.index + 1);
+        // Update slides and dots
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === slideIndex);
+            if (dots[i]) {
+                dots[i].classList.toggle('active', i === slideIndex);
             }
-        }, 5000);
+        });
     }
-};
 
-// Initialize slideshow
-document.addEventListener('DOMContentLoaded', () => {
-    Slideshow.init();
+    // Initialize the first slide
+    if (slides.length > 0) {
+        showSlide(slideIndex);
+    }
+
+    // Next/Previous button listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            showSlide(slideIndex + 1);
+        });
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            showSlide(slideIndex - 1);
+        });
+    }
+
+    // Dot navigation
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            showSlide(i);
+        });
+    });
 });

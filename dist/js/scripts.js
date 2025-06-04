@@ -7,8 +7,7 @@
 // Scripts
 // 
 
-window.addEventListener('DOMContentLoaded', event => {
-
+window.addEventListener('DOMContentLoaded', () => {
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
@@ -16,14 +15,14 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#sideNav',
             offset: 74,
         });
-    };
+    }
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
     const responsiveNavItems = [].slice.call(
         document.querySelectorAll('#navbarResponsive .nav-link')
     );
-    responsiveNavItems.map(function (responsiveNavItem) {
+    responsiveNavItems.forEach((responsiveNavItem) => {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
@@ -31,45 +30,47 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Slideshow logic
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.mySlides');
+    const dots = document.querySelectorAll('.dot');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+
+    function showSlide(index) {
+        // Ensure index stays within bounds
+        slideIndex = (index + slides.length) % slides.length;
+
+        // Update slides and dots
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === slideIndex);
+            if (dots[i]) {
+                dots[i].classList.toggle('active', i === slideIndex);
+            }
+        });
+    }
+
+    // Initialize the first slide
+    if (slides.length > 0) {
+        showSlide(slideIndex);
+    }
+
+    // Next/Previous button listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            showSlide(slideIndex + 1);
+        });
+    }
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            showSlide(slideIndex - 1);
+        });
+    }
+
+    // Dot navigation
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            showSlide(i);
+        });
+    });
 });
-
-// Project Slideshow
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    const slideshows = document.querySelectorAll('.slideshow-container');
-
-    slideshows.forEach(slideshow => {
-        const slides = slideshow.querySelectorAll('.mySlides');
-        const dots = slideshow.parentElement.querySelectorAll('.dot');
-
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-
-        // Hide all slides
-        slides.forEach(slide => slide.style.display = "none");
-
-        // Remove active class from all dots
-        dots.forEach(dot => dot.classList.remove('active'));
-
-        // Show the current slide and activate its dot
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].classList.add('active');
-    });
-}
-
-// Auto advance slides every 5 seconds
-setInterval(() => {
-    const slideshows = document.querySelectorAll('.slideshow-container');
-    slideshows.forEach(slideshow => {
-        const slides = slideshow.querySelectorAll('.mySlides');
-        if (slides.length > 1) {
-            currentSlide(slideIndex + 1);
-        }
-    });
-}, 5000);
