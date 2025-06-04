@@ -11488,14 +11488,15 @@ section.resume-section .flex-shrink-0 .text-primary {
   }
 }
 .img-projects {
-  max-width: 300px;
+  width: 100%;
+  max-width: 600px;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 1.5rem;
-  align-self: center;
+  margin: 1rem auto;
+  display: block;
 }
 
 .video-container {
@@ -11572,6 +11573,7 @@ section.resume-section .flex-shrink-0 .text-primary {
 .vid-projects {
   height: 338px;
   display: block;
+  margin: 1rem auto;
 }
 
 .slideshow-container {
@@ -11620,9 +11622,11 @@ section.resume-section .flex-shrink-0 .text-primary {
 }
 
 @media (max-width: 767.98px) {
-  .img-projects {
-    max-width: 250px;
-    margin: 1rem 0;
+  .img-projects,
+.vid-projects {
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
   }
 
   .video-container,
@@ -11630,14 +11634,8 @@ section.resume-section .flex-shrink-0 .text-primary {
     max-width: 100%;
   }
 
-  .vid-projects,
-.slideshow-container {
+  .slideshow-container {
     max-width: 100%;
-  }
-
-  .vid-projects {
-    height: auto;
-    min-height: 200px;
   }
 }
 .skills-section .skills-category {

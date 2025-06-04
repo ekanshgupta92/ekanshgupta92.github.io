@@ -1,35 +1,85 @@
 doctype html
 html(lang='en')
-
     head
-
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
-
-        title Resume - Start Bootstrap Theme
-
-        link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
-
+        meta(name='description', content='Ekansh Gupta – Robotics and AI Engineer from Columbia University. Specializing in intelligent systems, machine learning, and industrial automation. View projects and resume.')
+        meta(name='author', content='Ekansh Gupta')
+        meta(name='google-site-verification', content='KAOf0UkCfrooQiwLTRMti5tb7OPxlRmFix_3_x_97mU')
+        title Ekansh Gupta | Robotics & AI Engineer | Columbia University
+        link(rel='icon', type='image/png', href='./dist/assets/img/logo2.png')
+        link(rel='canonical', href='https://ekanshgupta.co.in')
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
-
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
-
         // Core theme CSS (includes Bootstrap)
-        link(href='css/styles.css', rel='stylesheet')
+        link(href='dist/css/styles.css', rel='stylesheet')
+        script(type='application/ld+json').
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Ekansh Gupta",
+              "url": "https://ekanshgupta.co.in",
+              "sameAs": [
+                "https://www.linkedin.com/in/ekanshgupta92/",
+                "https://github.com/ekanshgupta92",
+                "https://twitter.com/Ekanshgupta92"
+              ],
+              "jobTitle": "Robotics and AI Engineer",
+              "alumniOf": [
+                {
+                  "@type": "EducationalOrganization",
+                  "name": "Columbia University"
+                },
+                {
+                  "@type": "EducationalOrganization",
+                  "name": "Birla Institute of Technology and Science, Pilani"
+                }
+              ],
+              "description": "Robotics and AI Engineer building intelligent autonomous systems through AI, machine learning, and perception.",
+              "image": "https://ekanshgupta.co.in/dist/assets/img/profile.jpg",
+              "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Robotics and AI Engineer",
+                "estimatedSalary": {
+                  "@type": "MonetaryAmount",
+                  "currency": "USD",
+                  "value": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 0,
+                    "unitText": "YEAR"
+                  }
+                }
+              },
+              "worksFor": {
+                "@type": "EducationalOrganization",
+                "name": "Columbia University"
+              },
+              "previousEmployment": [
+                {
+                  "@type": "Organization",
+                  "name": "SAP Labs",
+                  "jobTitle": "Software Developer Associate"
+                }
+              ]
+            }
+        script(async src='https://www.googletagmanager.com/gtag/js?id=G-E61LS3TFHM')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-E61LS3TFHM');
 
     body#page-top
-
         // Navigation
         nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
             a.navbar-brand.js-scroll-trigger(href='#page-top')
-                span.d-block.d-lg-none Clarence Taylor
+                span.d-block.d-lg-none Ekansh Gupta
                 span.d-none.d-lg-block
-                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/profile.jpg', alt='...')
+                    img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='dist/assets/img/profile.jpg', alt='Profile')
             button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
             #navbarResponsive.collapse.navbar-collapse
@@ -37,82 +87,121 @@ html(lang='en')
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#about') About
                     li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#projects') Projects
+                    li.nav-item
                         a.nav-link.js-scroll-trigger(href='#experience') Experience
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#education') Education
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#skills') Skills
                     li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#interests') Interests
-                    li.nav-item
-                        a.nav-link.js-scroll-trigger(href='#awards') Awards
+                        a.nav-link.js-scroll-trigger(href='https://drive.google.com/file/d/1aG5Tk-VUBmZSW3y3zgt14cBe-YJLmzSd/view?usp=sharing', target='_blank') Resume
 
         // Page Content
         .container-fluid.p-0
-
             // About
             section#about.resume-section
                 .resume-section-content
                     h1.mb-0
-                        | Clarence 
-                        span.text-primary Taylor
+                        | Ekansh
+                        span.text-primary Gupta
                     .subheading.mb-5
-                        | 3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 · 
-                        a(href='mailto:name@email.com') name@email.com
+                        | New York, NY · 
+                        a(href='mailto:ekanshgupta92@email.com') ekanshgupta92@gmail.com
+                        |  · (+1) 646-260-6775
+                    h5.mb-0
+                        | "Building Intelligent Robotics Systems Through AI/ML Innovation"
                     p.lead.mb-5
-                        | I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+                        | As a Robotics and AI Engineer, I specialize in developing intelligent systems that seamlessly integrate 
+                        strong artificial learning, perception, and robotics
+                        | . Currently pursuing my MS in Robotics at 
+                        a(href='https://www.columbia.edu/') Columbia University
+                        | , I'm passionate about creating autonomous solutions that can perceive, learn, and interact with their environment in real-time. My expertise spans from advanced perception algorithms for industrial automation to reinforcement learning for adaptive robot control. I'm committed to pushing the boundaries of AI and robotics, bridging cutting-edge research with practical applications to solve complex challenges in automation and decision-making across industries.
                     .social-icons
-                        a.social-icon(href='#!')
+                        a.social-icon(href='https://www.linkedin.com/in/ekanshgupta92/')
                             i.fab.fa-linkedin-in
-                        a.social-icon(href='#!')
+                        a.social-icon(href='https://github.com/ekanshgupta92')
                             i.fab.fa-github
-                        a.social-icon(href='#!')
+                        a.social-icon(href='https://twitter.com/Ekanshgupta92')
                             i.fab.fa-twitter
-                        a.social-icon(href='#!')
+                        a.social-icon(href='https://www.facebook.com/ekanshgupta2002')
                             i.fab.fa-facebook-f
+
+            hr.m-0
+
+            // Projects
+            section#projects.resume-section
+                .resume-section-content
+                    h2.mb-5 Projects
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Differentiable LOAM
+                            p
+                                strong Problem: 
+                                | Developing a differentiable variant of LOAM (Lidar Odometry and Mapping) for end-to-end learning in autonomous vehicles.
+                            p
+                                strong Solution:
+                            ul
+                                li Developed a differentiable version of LOAM, enabling sensitivity analysis of point cloud perturbations on map generation and path planning.
+                                li Refined differentiable point cloud sampling algorithms.
+                                li Implemented soft selection for scan registration and point selection from LiDAR data.
+                                li Designed and trained an attention-based neural network to assign weights to each point based on their relevance for ICP.
+                                li Collected pointcloud data using the CARLA simulator for training the network.
+                            p
+                                strong Impact:
+                            ul
+                                li Enhanced autonomous navigation capabilities in environments with controlled dynamic obstacles.
+                                li Improved overall mapping efficiency and robustness of LOAM in real-world scenarios.
+                                li Integrated and tested the system on MathWorks' autonomous vehicle platform, demonstrating real-world self-driving capabilities.
+                                li Attention-based weighting helped mitigate the impact of dynamic obstacles, significantly improving mapping efficiency.
+                            p
+                                strong Technologies: 
+                                | Python, PyTorch, ROS, CARLA Simulator, Deep Learning, perception, point cloud processing.
+                            iframe.vid-projects(src='https://www.youtube.com/embed/xObXoC_6-X4?si=5IAF3MjfTCqX4PRK', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;', allowfullscreen='', loading='lazy')
+                            p(style='text-align:center')
+                                em Differentiable LOAM implementation for ADAS
+
+                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+                        .flex-grow-1
+                            h3.mb-0 Unmanned Aerial Vehicle
+                            p
+                                strong Problem: 
+                                | Design an autonomous system for a passenger drone capable of safe, efficient navigation in complex urban environments with dynamic obstacles.
+                            p
+                                strong Solution:
+                            ul
+                                li Developed and implemented B-spline based path planning algorithms for smooth and efficient drone navigation.
+                                li Integrated various sensors for enhanced environmental awareness and obstacle detection.
+                                li Utilized the local support property of B-splines to enable real-time path modification in response to dynamic obstacles.
+                            p
+                                strong Impact:
+                            ul
+                                li Achieved collision-free navigation in simulated urban environments with dynamic obstacles.
+                                li Enhanced the overall safety and efficiency of passenger drone operations.
+                                li Successfully contributed to a $1 Mn, government-funded project with significant implications for urban air mobility.
+                            p
+                                strong Technologies: 
+                                | ROS, Gazebo, Python, Sensor fusion, SLAM, Pixhawk flight controller, Bsplines.
+                            .slideshow-container
+                                .mySlides.active
+                                    iframe.vid-projects(src='https://www.youtube.com/embed/YbJjPI5uK3E', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
 
             hr.m-0
 
             // Experience
             section#experience.resume-section
-               .resume-section-content
+                .resume-section-content
                     h2.mb-5 Experience
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
-                            h3.mb-0 Senior Web Developer
-                            .subheading.mb-3 Intelitec Solutions
+                            h3.mb-0 Software Developer Associate
+                            .subheading.mb-3 SAP Labs
                             p
-                                | Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+                                | Developed and maintained enterprise software solutions using Java and Spring Boot. Collaborated with cross-functional teams to deliver high-quality software products.
                         .flex-shrink-0
-                            span.text-primary March 2013 - Present
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Web Developer
-                            .subheading.mb-3 Intelitec Solutions
-                            p
-                                | Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-                        .flex-shrink-0
-                            span.text-primary December 2011 - March 2013
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
-                        .flex-grow-1
-                            h3.mb-0 Junior Web Designer
-                            .subheading.mb-3 Shout! Media Productions
-                            p
-                                | Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
-                        .flex-shrink-0
-                            span.text-primary July 2010 - December 2011
-
-                    .d-flex.flex-column.flex-md-row.justify-content-between
-                        .flex-grow-1
-                            h3.mb-0 Web Design Intern
-                            .subheading.mb-3 Shout! Media Productions
-                            p
-                                | Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-                        .flex-shrink-0
-                            span.text-primary September 2008 - June 2010
+                            span.text-primary July 2020 - July 2022
 
             hr.m-0
 
@@ -123,20 +212,21 @@ html(lang='en')
 
                     .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
                         .flex-grow-1
-                            h3.mb-0 University of Colorado Boulder
-                            .subheading.mb-3 Bachelor of Science
-                            div Computer Science - Web Development Track
-                            p GPA: 3.23
+                            h3.mb-0 Columbia University
+                            .subheading.mb-3 Master of Science
+                            div Robotics Engineering
+                            p GPA: 3.8
                         .flex-shrink-0
-                            span.text-primary August 2006 - May 2010
+                            span.text-primary August 2022 - Present
 
                     .d-flex.flex-column.flex-md-row.justify-content-between
                         .flex-grow-1
-                            h3.mb-0 James Buchanan High School
-                            .subheading.mb-3 Technology Magnet Program
-                            p GPA: 3.56
+                            h3.mb-0 Birla Institute of Technology and Science, Pilani
+                            .subheading.mb-3 Bachelor of Engineering
+                            div Electronics and Instrumentation
+                            p GPA: 8.5
                         .flex-shrink-0
-                            span.text-primary August 2002 - May 2006
+                            span.text-primary August 2016 - May 2020
 
             hr.m-0
 
@@ -147,107 +237,41 @@ html(lang='en')
                     .subheading.mb-3 Programming Languages & Tools
                     ul.list-inline.dev-icons
                         li.list-inline-item
-                            i.fab.fa-html5
+                            i.fab.fa-python
                         li.list-inline-item
-                            i.fab.fa-css3-alt
+                            i.fab.fa-java
                         li.list-inline-item
-                            i.fab.fa-js-square
+                            i.fab.fa-cpp
                         li.list-inline-item
-                            i.fab.fa-angular
+                            i.fab.fa-ros
                         li.list-inline-item
-                            i.fab.fa-react
+                            i.fab.fa-linux
                         li.list-inline-item
-                            i.fab.fa-node-js
+                            i.fab.fa-git
                         li.list-inline-item
-                            i.fab.fa-sass
+                            i.fab.fa-docker
                         li.list-inline-item
-                            i.fab.fa-less
-                        li.list-inline-item
-                            i.fab.fa-wordpress
-                        li.list-inline-item
-                            i.fab.fa-gulp
-                        li.list-inline-item
-                            i.fab.fa-grunt
-                        li.list-inline-item
-                            i.fab.fa-npm
+                            i.fab.fa-aws
                     .subheading.mb-3 Workflow
                     ul.fa-ul.mb-0
                         li
                             span.fa-li
                                 i.fas.fa-check
-                            | Mobile-First, Responsive Design
+                            | Robotics & AI Development
                         li
                             span.fa-li
                                 i.fas.fa-check
-                            | Cross Browser Testing & Debugging
+                            | Machine Learning & Deep Learning
                         li
                             span.fa-li
                                 i.fas.fa-check
-                            | Cross Functional Teams
+                            | Computer Vision & Perception
                         li
                             span.fa-li
                                 i.fas.fa-check
                             | Agile Development & Scrum
 
-            hr.m-0
-
-            // Interests
-            section#interests.resume-section
-                .resume-section-content
-                    h2.mb-5 Interests
-                    p
-                        | Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.
-                    p.mb-0
-                        | When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.
-
-            hr.m-0
-
-            // Awards
-            section#awards.resume-section
-                .resume-section-content
-                    h2.mb-5 Awards & Certifications
-                    ul.fa-ul.mb-0
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | Google Analytics Certified Developer
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | Mobile Web Specialist - Google Certification
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 2
-                            sup nd 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - James Buchanan High School - Hackathon 2006
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 3
-                            sup rd 
-                            | Place - James Buchanan High School - Hackathon 2005
-
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js')
-
         // Core theme JS
         script(src='js/scripts.js')

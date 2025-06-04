@@ -28,7 +28,9 @@ module.exports = function renderPug(filePath) {
         proseWrap: 'preserve',
         endOfLine: 'lf',
         parser: 'html',
-        htmlWhitespaceSensitivity: 'ignore'
+        htmlWhitespaceSensitivity: 'css',
+        bracketSameLine: true,
+        embeddedLanguageFormatting: 'auto'
     });
 
     fs.writeFileSync(destPath, prettified);

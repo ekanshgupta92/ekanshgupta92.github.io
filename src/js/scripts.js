@@ -29,8 +29,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let slideIndex = 0;
     const slides = document.querySelectorAll('.mySlides');
     const dots = document.querySelectorAll('.dot');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
 
     function showSlide(index) {
         // Ensure index stays within bounds
@@ -48,18 +46,6 @@ window.addEventListener('DOMContentLoaded', () => {
     // Initialize the first slide
     if (slides.length > 0) {
         showSlide(slideIndex);
-    }
-
-    // Next/Previous button listeners
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            showSlide(slideIndex + 1);
-        });
-    }
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            showSlide(slideIndex - 1);
-        });
     }
 
     // Dot navigation
