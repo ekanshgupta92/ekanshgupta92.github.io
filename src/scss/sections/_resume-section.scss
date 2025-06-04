@@ -5,28 +5,203 @@
 section.resume-section {
     display: flex;
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 3rem 1rem;
     max-width: 75rem;
+    margin: 0 auto;
 
     .resume-section-content {
         width: 100%;
+    }
+
+    .d-flex {
+        margin-bottom: 1.5rem;
+    }
+
+    .flex-grow-1 {
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .subheading {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .flex-shrink-0 {
+        .text-primary {
+            font-weight: 500;
+        }
     }
 }
 
 @include media-breakpoint-up(md) {
     section.resume-section {
         min-height: 100vh;
+        padding: 4rem 2rem;
     }
 }
 
 @include media-breakpoint-up(lg) {
     section.resume-section {
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding: 5rem 3rem;
+    }
+}
+
+.img-projects {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 1.5rem;
+    align-self: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.project-slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    .slide {
+        display: none;
+        width: 100%;
+        height: auto;
+
+        &.active {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .slideshow-controls {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.5rem;
+        z-index: 1;
+
+        button {
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.95);
+            }
+        }
+    }
+}
+
+// Common styles for media containers
+%media-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vid-projects {
+    @extend %media-container;
+    height: 338px; // 16:9 aspect ratio
+    display: block;
+}
+
+.slideshow-container {
+    @extend %media-container;
+    overflow: hidden;
+
+    .mySlides {
+        display: none;
+        width: 100%;
+
+        &.active {
+            display: block;
+        }
+
+        .vid-projects {
+            margin: 0;
+        }
+    }
+}
+
+.slideshow-dots {
+    text-align: center;
+    margin-top: 1rem;
+
+    .dot {
+        $dot-size: 12px;
+        height: $dot-size;
+        width: $dot-size;
+        margin: 0 4px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &.active {
+            background-color: $primary;
+        }
+
+        &:hover {
+            background-color: #717171;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .img-projects {
+        max-width: 250px;
+        margin: 1rem 0;
+    }
+
+    .video-container,
+    .project-slideshow {
+        max-width: 100%;
+    }
+
+    .vid-projects,
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .vid-projects {
+        height: auto;
+        min-height: 200px;
     }
 }

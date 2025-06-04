@@ -1,6 +1,6 @@
 /*!
 * Start Bootstrap - Resume v7.0.3 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2021 Start Bootstrap
+* Copyright 2013-2025 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
 //
@@ -33,31 +33,43 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+// Project Slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    const slideshows = document.querySelectorAll('.slideshow-container');
+
+    slideshows.forEach(slideshow => {
+        const slides = slideshow.querySelectorAll('.mySlides');
+        const dots = slideshow.parentElement.querySelectorAll('.dot');
+
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+
+        // Hide all slides
+        slides.forEach(slide => slide.style.display = "none");
+
+        // Remove active class from all dots
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Show the current slide and activate its dot
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add('active');
+    });
 }
+
+// Auto advance slides every 5 seconds
+setInterval(() => {
+    const slideshows = document.querySelectorAll('.slideshow-container');
+    slideshows.forEach(slideshow => {
+        const slides = slideshow.querySelectorAll('.mySlides');
+        if (slides.length > 1) {
+            currentSlide(slideIndex + 1);
+        }
+    });
+}, 5000);
