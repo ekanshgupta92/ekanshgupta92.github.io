@@ -23,7 +23,6 @@ h3,
 h4,
 h5,
 h6 {
-	text-transform: uppercase;
 	margin-bottom: 1rem;
 	line-height: $headings-line-height;
 }
@@ -38,16 +37,15 @@ p {
 }
 
 p.lead {
-	font-size: 1.15rem;
+	font-size: 1.05rem;
 	font-weight: 400;
 	margin-bottom: 2rem;
 }
 
 .subheading {
 	font-family: $headings-font-family;
-	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	margin-bottom: 1.5rem;
 }
 

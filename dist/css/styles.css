@@ -110,20 +110,20 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.625rem + 4.5vw);
+  font-size: calc(1.475rem + 2.7vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.425rem + 2.1vw);
+  font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -146,7 +146,7 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 h6, .h6 {
@@ -7586,11 +7586,11 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.625rem + 4.5vw) !important;
+  font-size: calc(1.475rem + 2.7vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.425rem + 2.1vw) !important;
+  font-size: calc(1.375rem + 1.5vw) !important;
 }
 
 .fs-3 {
@@ -7602,7 +7602,7 @@ textarea.form-control-lg {
 }
 
 .fs-5 {
-  font-size: 1.25rem !important;
+  font-size: 1.15rem !important;
 }
 
 .fs-6 {
@@ -11220,11 +11220,11 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 5rem !important;
+    font-size: 3.5rem !important;
   }
 
   .fs-2 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
   }
 
   .fs-3 {
@@ -11301,7 +11301,6 @@ h5,
 .h5,
 h6,
 .h6 {
-  text-transform: uppercase;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -11316,16 +11315,15 @@ p {
 }
 
 p.lead {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 400;
   margin-bottom: 2rem;
 }
 
 .subheading {
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -11449,10 +11447,6 @@ p.lead {
   background-color: #00889a;
 }
 
-.dev-icons {
-  font-size: 3rem;
-}
-
 section.resume-section {
   display: flex;
   align-items: center;
@@ -11497,69 +11491,6 @@ section.resume-section .flex-shrink-0 .text-primary {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin: 1rem auto;
   display: block;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project-slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.project-slideshow .slide {
-  display: none;
-  width: 100%;
-  height: auto;
-}
-.project-slideshow .slide.active {
-  display: block;
-}
-.project-slideshow .slide img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.project-slideshow .slideshow-controls {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.5rem;
-  z-index: 1;
-}
-.project-slideshow .slideshow-controls button {
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-.project-slideshow .slideshow-controls button:hover {
-  background: rgba(255, 255, 255, 0.95);
 }
 
 .slideshow-container, .vid-projects {
@@ -11627,11 +11558,6 @@ section.resume-section .flex-shrink-0 .text-primary {
     max-width: 100%;
     height: auto;
     min-height: 200px;
-  }
-
-  .video-container,
-.project-slideshow {
-    max-width: 100%;
   }
 
   .slideshow-container {

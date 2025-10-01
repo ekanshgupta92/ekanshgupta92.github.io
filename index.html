@@ -26,7 +26,6 @@
     <title>Ekansh Gupta | Robotics & AI Engineer | Columbia University</title>
     <link rel="icon" type="image/png" href="./dist/assets/img/logo2.png" />
     <link rel="canonical" href="https://ekanshgupta.co.in" />
-    <!-- <link rel="icon" type="image/x-icon" href="dist/assets/img/favicon.ico" /> -->
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous" defer></script>
     <!-- Google fonts-->
@@ -37,7 +36,7 @@
     <link rel="preload" href="dist/css/styles.css" as="style">
     <link rel="preload" href="dist/assets/img/profile.jpg" as="image">
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="dist/css/styles.css" rel="stylesheet" />
+    <link href="dist/css/styles.css" rel="stylesheet" media="all">
     <script type="application/ld+json">
             {
               "@context": "https://schema.org",
@@ -119,7 +118,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                        href="https://drive.google.com/file/d/1aG5Tk-VUBmZSW3y3zgt14cBe-YJLmzSd/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1HXcQZR9Dxf9EzMW365ZO0dSSGmnM4BpB/view?usp=sharing"
                         target="_blank">Resume</a></li>
             </ul>
         </div>
@@ -134,7 +133,7 @@
                     <span class="text-primary">Gupta</span>
                 </h1>
                 <div class="subheading mb-5">
-                    New York, NY · <a href="mailto:ekanshgupta92@email.com">ekanshgupta92@gmail.com</a> · (+1)
+                    New York, NY · <a href="mailto:gupta.ekansh@columbia.edu">gupta.ekansh@columbia.edu</a> · (+1)
                     646-260-6775
                 </div>
 
@@ -144,7 +143,7 @@
                 <p></p>
                 <p class="lead mb-5">
                     As a Robotics and AI Engineer, I specialize in developing intelligent systems that
-                    seamlessly integrate <strong>artificial learning, perception, and robotics</strong>. Currently
+                    seamlessly integrate <strong>artificial intelligence, perception, and robotics</strong>. Currently
                     pursuing my MS in Robotics at <a href="https://www.columbia.edu/">Columbia University</a>, I'm
                     passionate about creating autonomous solutions that can perceive, learn, and interact with their
                     environment in real-time. My expertise spans from advanced perception algorithms for industrial
@@ -172,9 +171,10 @@
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Differentiable LOAM </h3>
-                        <p> <strong>Problem:</strong> Developing a differentiable variant of LOAM (Lidar Odometry and
-                            Mapping) for end-to-end learning in autonomous vehicles.</p>
+                        <h3 class="mb-0">Differentiable LOAM</h3>
+                        <p> <strong>Problem:</strong> Traditional LOAM (LiDAR Odometry and Mapping) systems lack
+                            differentiability, limiting their integration with end-to-end learning pipelines for
+                            autonomous vehicles.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
@@ -201,23 +201,72 @@
                         </p>
 
                         <p> <strong>Technologies:</strong> Python, PyTorch, ROS, CARLA Simulator, Deep Learning,
-                            perception, point cloud processing.</p>
+                            Perception, Point Cloud Processing.</p>
 
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/xObXoC_6-X4?si=5IAF3MjfTCqX4PRK"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
                             allowfullscreen loading="lazy"></iframe>
-                        <p style="text-align:center"> <em>Differentiable LOAM implementation for ADAS
-                            </em>
+                        <p style="text-align:center"> <em>Differentiable LOAM implementation for ADAS</em></p>
                     </div>
                     <!-- <div class="flex-shrink-0"><span class="text-primary">Mar 2021 - Present</span></div> -->
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Spatial Vision-Language Model (Indoor Navigation & VQA)</h3>
+
+                        <p> <strong>Problem:</strong> Large language models like ChatGPT lack robust spatial reasoning
+                            capabilities, making them inefficient for tasks requiring precise spatial understanding and
+                            measurement in indoor environments.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Developed a multimodal deep learning pipeline fusing vision and language models for
+                                robust scene understanding and visual question answering in indoor environments.</li>
+                            <li>Integrated synthetic and real datasets with robust object detection using SAM2 (Segment
+                                Anything Model 2).</li>
+                            <li>Implemented batch-wise preprocessing and disk caching for efficient large-scale
+                                training.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> PyTorch, HuggingFace, ViT (Vision Transformer), T5, SAM2.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Waypoint-Based RL for Robot Manipulation</h3>
+
+                        <p> <strong>Problem:</strong> Training reinforcement learning agents from scratch for robotic
+                            manipulation tasks like opening doors and moving blocks is extremely sample-inefficient and
+                            challenging to converge.</p>
+
+                        <p> <strong>Solution:</strong>
+                        <ul>
+                            <li>Implemented waypoint-based and Soft Actor-Critic (SAC) RL methods for robotic "pick and
+                                place" tasks in robosuite simulator.</li>
+                            <li>Created configurable training/evaluation pipelines with YAML settings and TensorBoard
+                                monitoring.</li>
+                            <li>Demonstrated modularity and extensibility for RL in simulation environments.</li>
+                        </ul>
+                        </p>
+
+                        <p> <strong>Technologies:</strong> TensorFlow, Reinforcement Learning, robosuite, SAC (Soft
+                            Actor-Critic).</p>
+
+                        <img class="img-projects" src="src/assets/waypoints.gif" alt="Waypoint-based RL demonstration"
+                            loading="lazy">
+                        <p style="text-align:center"> <em>Waypoint-based RL for robotic manipulation</em></p>
+                    </div>
                 </div>
 
                 <!-- <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Drone based Civil assessment of buildings</h3>
-                            <p>Project under IHub-Data along with Earthquake Engineering Research Centre (EERC IIIT Hyd) for an automated parameter calculation on buildings using Drones. 
-                            Contributed to the image stitching and rooftop area calculation besides making the code open source and easy to use for civil engineers. 
+                            <p>Project under IHub-Data along with Earthquake Engineering Research Centre (EERC IIIT Hyd) for an automated parameter calculation on buildings using Drones.
+                            Contributed to the image stitching and rooftop area calculation besides making the code open source and easy to use for civil engineers.
                         </div>
                     </div> -->
 
@@ -225,8 +274,9 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Unmanned Aerial Vehicle</h3>
 
-                        <p> <strong>Problem:</strong> Design an autonomous system for a passenger drone capable of safe,
-                            efficient navigation in complex urban environments with dynamic obstacles.</p>
+                        <p> <strong>Problem:</strong> Passenger drones require robust autonomous navigation systems
+                            capable of safe, efficient flight in complex urban environments with dynamic obstacles and
+                            real-time path adaptation.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
@@ -249,8 +299,8 @@
                         </ul>
                         </p>
 
-                        <p> <strong>Technologies:</strong> ROS, Gazebo, Python, Sensor fusion, SLAM, Pixhawk flight
-                            controller, Bsplines.</p>
+                        <p> <strong>Technologies:</strong> ROS, Gazebo, Python, Sensor Fusion, SLAM, Pixhawk Flight
+                            Controller, B-splines.</p>
 
                         <div class="slideshow-container">
                             <div class="mySlides active">
@@ -276,7 +326,8 @@
 
                         <p style="text-align:center"> <em>Test flights at IIIT Hyderabad and IIT Hyderabad. As seen,
                                 after going to offboard mode, the drone detects an obstacle in Rviz and
-                                changes track from the red one by manipulating the control points of the Bspline curve -
+                                changes track from the red one by manipulating the control points of the B-spline curve
+                                -
                                 generating a smooth trajectory.</em>
                         </p>
                     </div>
@@ -287,8 +338,9 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Autonomous Wheelchair</h3>
 
-                        <p> <strong>Problem:</strong> Develop an autonomous wheelchair system capable of navigating
-                            complex indoor environments like hospitals and airports using visual-language commands.</p>
+                        <p> <strong>Problem:</strong> Autonomous wheelchair systems need intuitive control mechanisms
+                            and precise navigation capabilities to safely traverse complex indoor environments like
+                            hospitals and airports.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
@@ -312,8 +364,8 @@
                         </ul>
                         </p>
 
-                        <p> <strong>Technologies:</strong> Python, ROS, VLM based Deep Learning, AMCL, RTABMaps, SLAM,
-                            sensors, actuators, and Control Systems.</p>
+                        <p> <strong>Technologies:</strong> Python, ROS, VLM-based Deep Learning, AMCL, RTABMap, SLAM,
+                            Sensors, Actuators, Control Systems.</p>
 
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/-fh-_bw6jk4"
                             title="YouTube video player" frameborder="0"
@@ -331,9 +383,9 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Autonomous Quadruped</h3>
 
-                        <p> <strong>Problem:</strong> Develop an advanced quadruped robot with Level 4 autonomy,
-                            focusing on Reinforcement Learning for gait pattern mastery and complex physics
-                            understanding.</p>
+                        <p> <strong>Problem:</strong> Quadruped robots require sophisticated gait generation and
+                            adaptive locomotion capabilities to achieve Level 4 autonomy in diverse terrains and
+                            operating conditions.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
@@ -358,8 +410,8 @@
                         </ul>
                         </p>
 
-                        <p> <strong>Technologies:</strong> Python, OpenAI gym, PyTorch, ROS, Reinforcement Learning,
-                            Pybullet.</p>
+                        <p> <strong>Technologies:</strong> Python, OpenAI Gym, PyTorch, ROS, Reinforcement Learning,
+                            PyBullet.</p>
 
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/_4770cm8G_0"
                             title="YouTube video player" frameborder="0"
@@ -376,9 +428,10 @@
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Path planning for 7 dof panda arm </h3>
-                        <p> <strong>Problem:</strong> Develop sophisticated control and path planning algorithms for a
-                            7-DOF Panda robot arm to perform precise movements and obstacle avoidance.</p>
+                        <h3 class="mb-0">Path Planning for 7-DOF Panda Arm</h3>
+                        <p> <strong>Problem:</strong> High-DOF robotic manipulators need sophisticated control and path
+                            planning algorithms to perform precise movements while avoiding obstacles in constrained
+                            environments.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
@@ -392,7 +445,7 @@
                         </ul>
                         </p>
 
-                        <p> <strong>Technologies:</strong> ROS2, RviZ, Forward and Inverse Kinematics, Path planning.
+                        <p> <strong>Technologies:</strong> ROS2, RViz, Forward and Inverse Kinematics, Path Planning.
                         </p>
 
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/h0amsPqJioM?si=CTbnZv4wtaM6fgz3"
@@ -405,8 +458,10 @@
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Tango - Parallel Linked Quadruped </h3>
-                        <p> <strong>Problem:</strong> Developing a fast legged robot.</p>
+                        <h3 class="mb-0">Tango - Parallel Linked Quadruped</h3>
+                        <p> <strong>Problem:</strong> Achieving high-speed locomotion in legged robots while maintaining
+                            stability and robustness requires advanced mechanical design and adaptive control
+                            strategies.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
@@ -427,8 +482,8 @@
                                 of the bot due to stable COM.</li>
                         </ul>
                         </p>
-                        <p> <strong>Technologies:</strong> ROS2, Pybullet, Sim2Real, Reinforcement Learning, Isaac Sim,
-                            3D printing and CAD.</p>
+                        <p> <strong>Technologies:</strong> ROS2, PyBullet, Sim2Real, Reinforcement Learning, Isaac Sim,
+                            3D Printing, CAD.</p>
 
                         <iframe class="vid-projects" src="https://www.youtube.com/embed/ix3hqsbzNuU?si=vK0lqsXZqjk627N0"
                             title="YouTube video player" frameborder="0"
@@ -441,13 +496,14 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Chatbot for Crustdata API</h3>
-                        <p> <strong>Problem:</strong> Develop an intelligent chatbot capable of providing accurate
-                            responses based on Notion documentation and Slack channel history.</p>
+                        <p> <strong>Problem:</strong> Users need instant access to accurate information from dispersed
+                            documentation sources like Notion and Slack, requiring an intelligent query resolution
+                            system.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
                             <li>Implemented a specialized web chatbot using Langchain with RAG, integrating Notion
-                                documention and examples along with additional knowledge from Slack.
+                                documentation and examples along with additional knowledge from Slack.
                             </li>
                             <li>Deployed the chatbot on Slack for instant query resolution.</li>
                         </ul>
@@ -466,12 +522,12 @@
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Flipkart Grid 2.0</h3>
 
-                        <p> <strong>Problem:</strong> Develop an autonomous hexacopter capable of precise indoor
-                            navigation for the Flipkart Grid challenge.</p>
+                        <p> <strong>Problem:</strong> Indoor autonomous navigation for hexacopters requires precise
+                            localization and control systems to navigate confined spaces without GPS assistance.</p>
 
                         <p> <strong>Solution:</strong>
                         <ul>
-                            <li>Implemented a computer vision system using Realsense camera and OpenCV to accurately
+                            <li>Implemented a computer vision system using RealSense camera and OpenCV to accurately
                                 calculate the center coordinate position within the camera frame.</li>
                             <li>Designed and implemented a PID control system for precise movement towards specified
                                 goals.</li>
@@ -500,7 +556,7 @@
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">Extended Kalman Filter</h3>
-                        <p> Implemented Extended Kalman filter for accurate 2D state estimation using noisy sensor data
+                        <p> Implemented Extended Kalman Filter for accurate 2D state estimation using noisy sensor data
                             in ROS2.
                         </p>
                     </div>
@@ -509,7 +565,7 @@
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Solar panel cleaning bot</h3>
+                        <h3 class="mb-0">Solar Panel Cleaning Bot</h3>
                         <p> Under Dr. Manoj Soni's guidance, I led the development of an adaptive solar panel
                             cleaning robot, securing Rs 40,500 in funding for prototyping. Our approach evolved from an
                             initial X-Y core mechanism designed in MATLAB Simulink to a more advanced, efficient design.
@@ -561,6 +617,30 @@
         <section class="resume-section" id="experience">
             <div class="resume-section-content">
                 <h2 class="mb-5">Experience</h2>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Tuesday Lab</h3>
+                        <div class="subheading mb-3">Robotics Engineer</div>
+                    </div>
+                    <div class="flex-shrink-0"><span class="text-primary">Sep 2025 - Present</span></div>
+
+                    <ul>
+                        <li>
+                            <p>Developed a pipeline to translate humanoid animations from Blender to Isaac Sim,
+                                capturing joint angles and body kinematics as motion priors for training RL models with
+                                Adversarial Motion Priors (AMP).</p>
+                        </li>
+                        <li>
+                            <p>Trained RL agents to replicate emote priors and validating in sim2real scenarios,
+                                focusing on stability and adaptability.</p>
+                        </li>
+                    </ul>
+
+                    <p><strong>Technologies:</strong> Python, Isaac Sim, Blender, Reinforcement Learning, AMP, Sim2Real.
+                    </p>
+                </div>
+
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-0">SAP Labs</h3>
@@ -577,7 +657,7 @@
                             </p>
                         </li>
                         <li>
-                            <p> <strong>ML based Support Optimization:</strong> Proposed and developed an ensemble model
+                            <p> <strong>ML-based Support Optimization:</strong> Proposed and developed an ensemble model
                                 using SAP Joule to classify and resolve common partner connection errors. This
                                 initiative targeted 40% of support tickets, significantly decreasing response times and
                                 reducing dependence on the support team.
@@ -608,26 +688,29 @@
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">Jun 2022 - Dec 2022</span></div>
 
-                    <p>Undergraduate Thesis at the Robotics Research Centre (RRC), IIIT Hyderabad, advised by
-                        Prof.
-                        <a href="https://www.iiit.ac.in/faculty/k-madhava-krishna/">Madhava Krishna</a>.
+                    <p>Undergraduate thesis at the Robotics Research Centre (RRC), IIIT Hyderabad, advised by
+                        Prof. <a href="https://www.iiit.ac.in/faculty/k-madhava-krishna/">Madhava Krishna</a>.
 
                     <ul>
-                        <li><strong>Differentiable LOAM</strong> Developed an enhanced version of LiDAR Odometry and
-                            Mapping (LOAM) for end to end learning and sensitivity analysis. Implemented soft selection
+                        <li><strong>Differentiable LOAM:</strong> Developed an enhanced version of LiDAR Odometry and
+                            Mapping (LOAM) for end-to-end learning and sensitivity analysis. Implemented soft selection
                             for scan registration and trained an attention-based neural network for point relevance
                             weighting, achieving up to 1.5x faster ICP convergence.</li>
                         <li><strong>Passenger Carrying Drone:</strong> Contributed to a MeitY-funded passenger drone
                             project, focusing on B-spline based path planning and sensor integration. Implemented
                             algorithms for dynamic obstacle avoidance and real-time path modification, enhancing
                             navigation capabilities in complex urban environments.</li>
-                        <li><strong>Autonomous Wheelchair</strong>Led hardware implementation for an IHub-Data funded
+                        <li><strong>Autonomous Wheelchair:</strong> Led hardware implementation for an IHub-Data funded
                             project to develop an autonomous wheelchair using Vision-and-Language Navigation (VLN).
-                            Integrated RTABmap and AMCL for precise indoor navigation in hospitals and airports, and
+                            Integrated RTABMap and AMCL for precise indoor navigation in hospitals and airports, and
                             trained a VLN model for natural language control.</li>
                     </ul>
 
                     </p>
+
+                    <p><strong>Technologies:</strong> Python, PyTorch, ROS, CARLA Simulator, Gazebo, Deep Learning,
+                        LiDAR, Point Cloud Processing, Computer Vision, Path Planning, SLAM, RTABMap, AMCL,
+                        Vision-and-Language Navigation (VLN), Sensor Fusion, B-splines.</p>
 
                 </div>
 
@@ -654,7 +737,7 @@
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Sirius Motor sports</h3>
+                        <h3 class="mb-0">Sirius Motorsports</h3>
                         <div class="subheading mb-3">Summer Intern</div>
                     </div>
                     <div class="flex-shrink-0"><span class="text-primary">May 2021 - Jul 2021</span></div>
@@ -681,24 +764,26 @@
                         <div class="subheading mb-3">Master of Science</div>
                         <div>Mechanical Engineering - Robotics and Control Concentration - GPA: 3.6/4</div>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2024 - Dec 2025(Exp)</span></div>
+                    <div class="flex-shrink-0"><span class="text-primary">August 2024 - Dec 2025 (Expected)</span></div>
 
                     <ul>
                         <li>
                             <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong> Intro to Robotics,
                                 Applied Robotics, Robotics Studio, Robot Learning, Advanced Machine Learning, Neural
-                                Networks and Deep learning, Reinforcement Leaning.</p>
+                                Networks and Deep Learning, Advanced Topics in Deep Learning, Reinforcement Learning,
+                                Computational Aspects of Robotics.</p>
                         </li>
 
                         <li>
-                            <p><strong>Teaching Assistantship:</strong> TA for Lab on a Chip (Micro robotics Spring
-                                2025), Backend Engineer for SURF, Biology Department.</p>
+                            <p><strong>Teaching Assistantship:</strong> TA for Advanced Machine Learning (STATGR5242 -
+                                Fall 2025), TA for Lab on a Chip (Microrobotics - Spring 2025), Backend Engineer for
+                                SURF, Biology Department.</p>
                         </li>
                     </ul>
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-between">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Bits Pilani Pilani Campus</h3>
+                        <h3 class="mb-0">BITS Pilani, Pilani Campus</h3>
                         <div class="subheading mb-3">Bachelor of Engineering</div>
                         <div>Mechanical Engineering - CGPA: 8.2/10</div>
                     </div>
@@ -707,7 +792,7 @@
                     <ul>
                         <li>
                             <p style="margin-top: 10px;"><strong>Relevant Coursework:</strong> Mechatronics, Deep
-                                Learning, Mechanisms and machines, Digital Image Processing.</p>
+                                Learning, Mechanisms and Machines, Digital Image Processing.</p>
                         </li>
                     </ul>
                 </div>
@@ -722,7 +807,7 @@
 
                 <div class="skills-categories-container">
                     <div class="skills-category">
-                        <h3>Programming Languages</h3>
+                        <h3>Languages</h3>
                         <div class="skills-grid">
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fab fa-python"></i></div>
@@ -746,7 +831,7 @@
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
-                                <div class="skill-name">LATEX</div>
+                                <div class="skill-name">LaTeX</div>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-leaf"></i></div>
@@ -758,7 +843,7 @@
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                                <div class="skill-name">ROS/ROS 2</div>
+                                <div class="skill-name">ROS/ROS2</div>
                             </div>
                         </div>
                     </div>
@@ -860,11 +945,11 @@
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-cube"></i></div>
-                                <div class="skill-name">Issac Sim</div>
+                                <div class="skill-name">Isaac Sim</div>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-gamepad"></i></div>
-                                <div class="skill-name">OpenAI gym</div>
+                                <div class="skill-name">OpenAI Gym</div>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-microchip"></i></div>
@@ -880,7 +965,7 @@
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-microchip"></i></div>
-                                <div class="skill-name">CUDA</div>
+                                <div class="skill-name">GCP</div>
                             </div>
                             <div class="skill-item">
                                 <div class="skill-icon"><i class="fas fa-cloud"></i></div>
