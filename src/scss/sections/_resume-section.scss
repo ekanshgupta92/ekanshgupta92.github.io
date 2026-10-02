@@ -11,6 +11,31 @@ section.resume-section {
 
     .resume-section-content {
         width: 100%;
+        max-width: 48rem; // keeps lines near 90 characters
+        margin: 0 auto;
+    }
+
+    ul {
+        margin-bottom: 1.5rem;
+    }
+
+    // Same rhythm for every bullet list, with or without <p> inside
+    li + li {
+        margin-top: 0.5rem;
+    }
+
+    li > p:last-child {
+        margin-bottom: 0;
+    }
+
+    // Breathing room between a project title and its first line
+    h3.mb-0 + p {
+        margin-top: 0.5rem;
+    }
+
+    // Keep "Solution:" / "Impact:" labels next to their lists
+    p:has(> strong:only-child) + ul {
+        margin-top: -1rem;
     }
 
     .d-flex {
@@ -68,7 +93,7 @@ section.resume-section {
 
 .vid-projects {
     @extend %media-container;
-    height: 338px; // Keep fixed height for videos
+    aspect-ratio: 16 / 9;
     display: block;
     margin: 1rem auto;
 }
@@ -89,9 +114,47 @@ section.resume-section {
         .vid-projects {
             margin: 0;
             width: 100%;
-            height: 338px; // 16:9 aspect ratio
         }
     }
+}
+
+// YouTube thumbnail that loads the player on click (see scripts.js)
+.vid-projects.yt {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background-color: $black;
+    cursor: pointer;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 4.25rem;
+        height: 3rem;
+        transform: translate(-50%, -50%);
+        border-radius: 0.75rem;
+        background: rgba($black, 0.75) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center / 1.75rem no-repeat;
+        transition: background-color 0.2s ease;
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+        background-color: #f00;
+    }
+}
+
+.media-caption {
+    text-align: center;
 }
 
 /* Dots/bullets/indicators */
@@ -106,9 +169,34 @@ section.resume-section {
     gap: 10px;
 }
 
+.slide-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0 0 0.2rem;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: $gray-700;
+    background-color: $white;
+    border: 1px solid $gray-300;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+        border-color: $primary;
+    }
+}
+
 .dot {
     height: 15px;
     width: 15px;
+    padding: 0;
+    border: 0;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;

@@ -50,6 +50,9 @@ The site includes a custom slideshow component (see Unmanned Aerial Vehicle proj
 - `.mySlides` class for slide containers
 - `.dot` class for navigation dots
 - JavaScript in `src/js/scripts.js` handles slide transitions and dot navigation
+- `.slide-arrow` buttons step to the previous/next slide
+
+YouTube videos are `<button class="vid-projects yt" data-id="VIDEO_ID">` thumbnails; `src/js/scripts.js` swaps in the player on click.
 
 ### SEO and Metadata
 

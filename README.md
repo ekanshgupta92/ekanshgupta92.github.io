@@ -19,4 +19,4 @@ npm run build   # rebuild dist/ from src/
 - Scripts: `src/js/scripts.js` → `dist/js/scripts.js`
 - Images: `src/assets/` → `dist/assets/`
 
-`dist/` is listed in `.gitignore` but its files are committed, so stage new build output with `git add -f`.
+`dist/` is committed (GitHub Pages serves it), so commit it after `npm run build`.
