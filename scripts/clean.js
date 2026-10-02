@@ -1,7 +1,4 @@
-const sh = require('shelljs');
-const upath = require('upath');
+const fs = require('fs');
+const path = require('path');
 
-const destPath = upath.resolve(upath.dirname(__filename), '../dist');
-
-sh.rm('-rf', `${destPath}/*`)
-
+fs.rmSync(path.resolve(__dirname, '../dist'), { recursive: true, force: true });
