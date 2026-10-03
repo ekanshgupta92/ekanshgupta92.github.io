@@ -1,19 +1,12 @@
 'use strict';
 const fs = require('fs');
+const path = require('path');
 const packageJSON = require('../package.json');
-const upath = require('upath');
-const sh = require('shelljs');
 
 module.exports = function renderScripts() {
+    const sourcePathScriptsJS = path.resolve(__dirname, '../src/js/scripts.js');
+    const destPathScriptsJS = path.resolve(__dirname, '../dist/js/scripts.js');
 
-    const sourcePath = upath.resolve(upath.dirname(__filename), '../src/js');
-    const destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    
-    sh.cp('-R', sourcePath, destPath)
-
-    const sourcePathScriptsJS = upath.resolve(upath.dirname(__filename), '../src/js/scripts.js');
-    const destPathScriptsJS = upath.resolve(upath.dirname(__filename), '../dist/js/scripts.js');
-    
     const copyright = `/*!
 * Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
 * Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
@@ -21,6 +14,9 @@ module.exports = function renderScripts() {
 */
 `
     const scriptsJS = fs.readFileSync(sourcePathScriptsJS);
-    
+
+    fs.mkdirSync(path.dirname(destPathScriptsJS), { recursive: true });
     fs.writeFileSync(destPathScriptsJS, copyright + scriptsJS);
 };
+
+if (require.main === module) module.exports();

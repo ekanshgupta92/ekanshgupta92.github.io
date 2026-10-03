@@ -71,3 +71,18 @@
         }
     }
 }
+
+// Resume link stands out for recruiters
+#sideNav .navbar-nav .nav-item .nav-link.nav-resume {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.4rem 1.5rem;
+    color: $white;
+    border: 1px solid rgba($white, 0.6);
+    border-radius: 50rem;
+
+    &:hover,
+    &:focus-visible {
+        background-color: rgba($white, 0.12);
+    }
+}

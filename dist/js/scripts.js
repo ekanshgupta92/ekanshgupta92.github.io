@@ -1,6 +1,6 @@
 /*!
 * Start Bootstrap - Resume v7.0.3 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2025 Start Bootstrap
+* Copyright 2013-2026 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
 //
@@ -30,6 +30,19 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Load the YouTube player only when its thumbnail is clicked
+    document.querySelectorAll('.yt').forEach((button) => {
+        button.addEventListener('click', () => {
+            const iframe = document.createElement('iframe');
+            iframe.className = 'vid-projects';
+            iframe.src = `https://www.youtube-nocookie.com/embed/${button.dataset.id}?autoplay=1`;
+            iframe.title = 'YouTube video player';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            button.replaceWith(iframe);
+        });
+    });
+
     // Slideshow logic
     let slideIndex = 0;
     const slides = document.querySelectorAll('.mySlides');
@@ -41,6 +54,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // Update slides and dots
         slides.forEach((slide, i) => {
+            // Reload a video being hidden so it stops playing
+            const iframe = slide.querySelector('iframe');
+            if (iframe && slide.classList.contains('active') && i !== slideIndex) {
+                iframe.src = iframe.src.replace('autoplay=1', 'autoplay=0');
+            }
             slide.classList.toggle('active', i === slideIndex);
             if (dots[i]) {
                 dots[i].classList.toggle('active', i === slideIndex);
@@ -57,6 +75,13 @@ window.addEventListener('DOMContentLoaded', () => {
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
             showSlide(i);
+        });
+    });
+
+    // Previous/next arrows
+    document.querySelectorAll('.slide-arrow').forEach((arrow) => {
+        arrow.addEventListener('click', () => {
+            showSlide(slideIndex + Number(arrow.dataset.step));
         });
     });
 });
